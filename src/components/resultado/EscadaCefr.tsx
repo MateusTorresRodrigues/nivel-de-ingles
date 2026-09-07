@@ -18,7 +18,7 @@ export function EscadaCefr({ levelIdx }: EscadaCefrProps) {
               "flex items-center justify-center self-end rounded-[10px] transition-all duration-500",
               active ? "flex-[1.6]" : "flex-1",
               active ? "h-[50px]" : "h-10",
-              active ? "bg-accent shadow-[0_6px_18px_-4px_oklch(0.52_0.11_205_/_0.5)]" : reached ? "bg-accent-reached" : "bg-fg/7",
+              active ? "bg-accent shadow-[0_6px_18px_-4px_rgb(26_85_208_/_0.5)]" : reached ? "bg-accent-reached" : "bg-fg/7",
             )}
           >
             <span

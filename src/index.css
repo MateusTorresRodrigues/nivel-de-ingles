@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300&display=swap');
 @import "tailwindcss";
 
-/* Tema único (claro), conforme o protótipo de design — sem alternância claro/escuro. */
+/* Tema único (claro), paleta portada do site "English with Ray" (creme + azul). */
 @theme {
-  --color-bg: #F7F5F1;
-  --color-fg: #1C1B18;
+  --color-bg: #FBF9F6;
+  --color-fg: #16130F;
 
-  /* Acento primário (teal) e variações usadas em fundos, hover e texto */
-  --color-accent: oklch(0.52 0.11 205);
-  --color-accent-hover: oklch(0.44 0.11 205);
-  --color-accent-active: oklch(0.42 0.11 205);
-  --color-accent-soft: oklch(0.94 0.03 205);
-  --color-accent-soft-2: oklch(0.96 0.02 205);
-  --color-accent-badge: oklch(0.93 0.035 205);
-  --color-accent-reached: oklch(0.88 0.045 205);
-  --color-accent-text: oklch(0.45 0.09 205);
-  --color-accent-text-2: oklch(0.42 0.09 205);
-  --color-accent-link: oklch(0.48 0.1 205);
+  /* Acento primário (azul) e variações usadas em fundos, hover e texto */
+  --color-accent: #1A55D0;
+  --color-accent-hover: #15459E;
+  --color-accent-active: #123680;
+  --color-accent-soft: #E7EEFB;
+  --color-accent-soft-2: #F1F5FD;
+  --color-accent-badge: #E3EAFA;
+  --color-accent-reached: #AEC5F0;
+  --color-accent-text: #1547B0;
+  --color-accent-text-2: #123C87;
+  --color-accent-link: #1A55D0;
   /* Glow do acento — usado em foco de inputs e no botão primário no hover */
-  --color-accent-glow: oklch(0.52 0.11 205 / 0.22);
+  --color-accent-glow: rgb(26 85 208 / 0.22);
 
   /* Alerta / atenção (pontos fracos, dificuldade, ações destrutivas) */
   --color-warn: oklch(0.58 0.12 40);
@@ -26,8 +26,8 @@
   --color-danger: oklch(0.55 0.13 30);
 
   /* Bloco escuro (recomendação, abas ativas do admin) */
-  --color-ink: #1C1B18;
-  --color-ink-soft: #262420;
+  --color-ink: #16130F;
+  --color-ink-soft: #221F19;
 
   --font-display: "Newsreader", Georgia, serif;
   --font-sans: "Instrument Sans", system-ui, sans-serif;
@@ -76,10 +76,10 @@ input, button, select, textarea { font-family: inherit; }
 .stagger-7 { animation-delay: .4s; }
 
 /* Sombras em camadas (mais realistas que uma única sombra rasa) para cards e botões. */
-.shadow-card { box-shadow: 0 1px 2px rgba(28,27,24,.04), 0 1px 1px rgba(28,27,24,.03); }
-.shadow-card-hover { box-shadow: 0 1px 2px rgba(28,27,24,.04), 0 10px 24px -8px rgba(28,27,24,.12); }
-.shadow-button { box-shadow: 0 1px 2px rgba(28,27,24,.1), 0 6px 16px -6px oklch(0.52 0.11 205 / 0.35); }
-.shadow-button-hover { box-shadow: 0 1px 2px rgba(28,27,24,.1), 0 10px 24px -6px oklch(0.44 0.11 205 / 0.45); }
+.shadow-card { box-shadow: 0 1px 2px rgba(22,19,15,.04), 0 1px 1px rgba(22,19,15,.03); }
+.shadow-card-hover { box-shadow: 0 1px 2px rgba(22,19,15,.04), 0 10px 24px -8px rgba(22,19,15,.12); }
+.shadow-button { box-shadow: 0 1px 2px rgba(22,19,15,.1), 0 6px 16px -6px rgb(26 85 208 / 0.35); }
+.shadow-button-hover { box-shadow: 0 1px 2px rgba(22,19,15,.1), 0 10px 24px -6px rgb(21 69 158 / 0.45); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }

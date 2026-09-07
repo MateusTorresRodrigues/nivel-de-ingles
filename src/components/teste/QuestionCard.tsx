@@ -70,7 +70,7 @@ export function QuestionCard({ questao, locked, onSelect }: QuestionCardProps) {
               >
                 {LETRAS[i]}
               </span>
-              <span className="flex-1 text-left">{option}</span>
+              <span className="flex-1 text-left first-letter:uppercase">{option}</span>
             </button>
           );
         })}

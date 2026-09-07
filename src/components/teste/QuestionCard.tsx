@@ -1,7 +1,25 @@
+import type { ReactNode } from "react";
 import type { Questao } from "../../lib/types";
 import { cn } from "../../lib/utils";
 
 const LETRAS = ["A", "B", "C", "D"];
+
+// As questões marcam a lacuna com "_____" (5 underscores) — como caractere literal, a fonte
+// não desenha um traço contínuo (fica com espaços entre os underscores). Por isso trocamos por
+// um elemento visual: uma linha de largura fixa, com a mesma posição de um sublinhado.
+const BLANK_PATTERN = /(_{3,})/g;
+
+function renderQuestionText(text: string): ReactNode[] {
+  return text.split(BLANK_PATTERN).map((part, i) =>
+    /^_{3,}$/.test(part) ? (
+      <span key={i} className="inline-block w-[3.2em] align-baseline border-b-2 border-fg/45">
+        &nbsp;
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    ),
+  );
+}
 
 interface QuestionCardProps {
   questao: Questao;
@@ -23,7 +41,7 @@ export function QuestionCard({ questao, locked, onSelect }: QuestionCardProps) {
       </div>
 
       <p className="m-0 mb-6 text-[19.5px] leading-[1.45] -tracking-[0.015em] whitespace-pre-line [text-wrap:pretty]">
-        {questao.question}
+        {renderQuestionText(questao.question)}
       </p>
 
       <div className="grid gap-[9px]">

@@ -20,9 +20,10 @@
   /* Glow do acento — usado em foco de inputs e no botão primário no hover */
   --color-accent-glow: rgb(26 85 208 / 0.22);
 
-  /* Alerta / atenção (pontos fracos, dificuldade, ações destrutivas) */
-  --color-warn: oklch(0.58 0.12 40);
-  --color-warn-dark: oklch(0.5 0.12 40);
+  /* "Pontos para melhorar" e categorias abaixo de 70% — agora azul, como o resto do site
+     (antes era laranja; --color-danger segue à parte, reservado para ações destrutivas). */
+  --color-warn: #1A55D0;
+  --color-warn-dark: #123C87;
   --color-danger: oklch(0.55 0.13 30);
 
   /* Bloco escuro (recomendação, abas ativas do admin) */

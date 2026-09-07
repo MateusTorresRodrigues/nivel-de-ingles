@@ -40,7 +40,7 @@ export function Teste() {
         <button
           type="button"
           onClick={() => navigate("/")}
-          className="border-none bg-transparent text-[12.5px] text-fg/42 cursor-pointer"
+          className="border-none bg-transparent text-[12.5px] text-fg/42 cursor-pointer transition-colors hover:text-fg/65"
         >
           Sair do teste
         </button>

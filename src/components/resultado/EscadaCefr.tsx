@@ -15,15 +15,15 @@ export function EscadaCefr({ levelIdx }: EscadaCefrProps) {
           <div
             key={code}
             className={cn(
-              "flex items-center justify-center self-end rounded-[10px] transition-all duration-[400ms]",
+              "flex items-center justify-center self-end rounded-[10px] transition-all duration-500",
               active ? "flex-[1.6]" : "flex-1",
               active ? "h-[50px]" : "h-10",
-              active ? "bg-accent" : reached ? "bg-accent-reached" : "bg-fg/7",
+              active ? "bg-accent shadow-[0_6px_18px_-4px_oklch(0.52_0.11_205_/_0.5)]" : reached ? "bg-accent-reached" : "bg-fg/7",
             )}
           >
             <span
               className={cn(
-                "font-semibold -tracking-[0.01em]",
+                "font-semibold -tracking-[0.01em] transition-all duration-500",
                 active ? "text-base" : "text-[12.5px]",
                 active ? "text-white" : reached ? "text-accent-text-2" : "text-fg/40",
               )}

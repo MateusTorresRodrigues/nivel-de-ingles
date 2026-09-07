@@ -19,7 +19,7 @@ export function Cadastro() {
       <button
         type="button"
         onClick={() => navigate("/")}
-        className="border-none bg-transparent p-0 mb-[26px] text-[13px] text-fg/50 cursor-pointer"
+        className="border-none bg-transparent p-0 mb-[26px] text-[13px] text-fg/50 cursor-pointer transition-colors hover:text-fg/70"
       >
         ← Voltar
       </button>
@@ -38,7 +38,7 @@ export function Cadastro() {
         value={state.name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Como podemos te chamar?"
-        className="w-full border border-fg/14 bg-white rounded-xl py-[15px] px-4 text-[15.5px] text-fg outline-none mb-5 transition-colors duration-[180ms] focus:border-accent"
+        className="w-full border border-fg/14 bg-white rounded-xl py-[15px] px-4 text-[15.5px] text-fg outline-none mb-5 transition-[border-color,box-shadow] duration-200 focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-glow)]"
       />
 
       <label htmlFor="email" className="flex items-baseline gap-2 text-[12.5px] font-semibold tracking-[0.03em] mb-2">
@@ -50,7 +50,7 @@ export function Cadastro() {
         value={state.email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="para receber o resultado"
-        className="w-full border border-fg/14 bg-white rounded-xl py-[15px] px-4 text-[15.5px] text-fg outline-none mb-5 transition-colors duration-[180ms] focus:border-accent"
+        className="w-full border border-fg/14 bg-white rounded-xl py-[15px] px-4 text-[15.5px] text-fg outline-none mb-5 transition-[border-color,box-shadow] duration-200 focus:border-accent focus:shadow-[0_0_0_4px_var(--color-accent-glow)]"
       />
 
       <label className="block text-[12.5px] font-semibold tracking-[0.03em] mb-2.5">OBJETIVO AO APRENDER INGLÊS</label>
@@ -61,8 +61,10 @@ export function Cadastro() {
             type="button"
             onClick={() => setGoal(goal)}
             className={cn(
-              "cursor-pointer text-sm -tracking-[0.01em] py-2.5 px-3.5 rounded-full border-[1.5px] transition-all duration-[160ms]",
-              state.goal === goal ? "border-accent bg-accent text-white" : "border-fg/14 bg-white text-fg",
+              "cursor-pointer text-sm -tracking-[0.01em] py-2.5 px-3.5 rounded-full border-[1.5px] transition-all duration-200 hover:-translate-y-0.5",
+              state.goal === goal
+                ? "border-accent bg-accent text-white shadow-button"
+                : "border-fg/14 bg-white text-fg hover:border-fg/28",
             )}
           >
             {goal}
@@ -75,9 +77,9 @@ export function Cadastro() {
         onClick={iniciarAvaliacao}
         disabled={!canStart}
         className={cn(
-          "w-full border-none rounded-[14px] text-base font-semibold -tracking-[0.01em] py-[17px] px-5 transition-all duration-[180ms]",
+          "w-full border-none rounded-[14px] text-base font-semibold -tracking-[0.01em] py-[17px] px-5 transition-all duration-200",
           canStart
-            ? "bg-accent text-white cursor-pointer shadow-[0_1px_2px_rgba(28,27,24,.14)]"
+            ? "bg-accent text-white cursor-pointer shadow-button hover:bg-accent-hover hover:shadow-button-hover hover:-translate-y-0.5"
             : "bg-fg/9 text-fg/38 cursor-not-allowed",
         )}
       >

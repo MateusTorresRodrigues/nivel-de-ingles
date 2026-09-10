@@ -104,6 +104,7 @@ export function Resultado() {
         <p className="relative m-0 mb-5 text-base leading-[1.5] text-white [text-wrap:pretty]">{resultado.recommendation}</p>
         <button
           type="button"
+          onClick={() => navigate("/melhorar-ingles")}
           className="relative w-full border-none rounded-xl bg-white text-ink text-[15px] font-semibold py-[15px] px-[18px] cursor-pointer transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
         >
           Quero melhorar meu inglês
